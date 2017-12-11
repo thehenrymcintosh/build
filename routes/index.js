@@ -1,0 +1,1 @@
+var express=require("express"),router=express.Router(),Article=require("../models/articles");router.get("/",function(e,r){Article.getAllArticles(function(e,t){if(e)throw e;console.log(t),r.render("index",{articles:t})})}),module.exports=router;
